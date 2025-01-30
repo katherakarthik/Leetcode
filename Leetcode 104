@@ -1,0 +1,13 @@
+class Solution {
+    public int maxDepth(TreeNode root) {
+        return Maxd(root);
+    }
+    public int Maxd(TreeNode root){
+        if(root==null)return 0;
+        int lef=Maxd(root.left);      //left 
+
+       int  ri=Maxd(root.right);    //right
+        return Math.max(lef,ri)+1;
+    }
+    
+}
